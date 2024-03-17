@@ -25,12 +25,9 @@
             <div class="lvl ease" @click="delay = 1500">Легкий</div>
             <div class="lvl normal" @click="delay = 1000">Нормальный</div>
             <div class="lvl hard" @click="delay = 400">Сложный</div>
-            {{ delay }}
           </div>
         </div>
       </div>
-      {{ sequence }}
-      {{ countClick }}
     </div>
     <modalFail v-if="isOpen" @closeModal="closeModal" />
   </div>
@@ -132,6 +129,7 @@ export default {
     },
     resetGame() {
       this.countClick = 0;
+      this.round = 0;
       this.sequence = [];
       this.isOpen = true;
     },
@@ -193,6 +191,7 @@ export default {
           grid-gap: 10px;
           margin-top: 10px;
           .lvl {
+            cursor: pointer;
             border-radius: 4px;
             padding: 5px 10px;
             &.ease {
@@ -217,6 +216,7 @@ export default {
   text-align: center;
   font-weight: 600;
   transition: 0.3s;
+  cursor: pointer;
   &.disabled {
     background-color: #f4f4f4;
   }
