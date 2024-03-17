@@ -43,11 +43,12 @@ export default {
       delay: 1500,
       round: 0,
       sequence: [],
+      // при заливании на github pages с помощью gh-pages звуки не заливались, поэтому сделала ссылкой
       audioFiles: {
-        0: "/src/assets/audio/1.ogg",
-        1: "/src/assets/audio/2.ogg",
-        2: "/src/assets/audio/3.ogg",
-        3: "/src/assets/audio/4.ogg",
+        0: "http://www.kellyking.me/projects/simon/sounds/1.ogg",
+        1: "http://www.kellyking.me/projects/simon/sounds/2.ogg",
+        2: "http://www.kellyking.me/projects/simon/sounds/3.ogg",
+        3: "http://www.kellyking.me/projects/simon/sounds/4.ogg",
       },
       disabledUI: false,
       activeColor: null,

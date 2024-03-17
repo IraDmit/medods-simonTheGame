@@ -6,10 +6,11 @@ import vue2 from '@vitejs/plugin-vue2'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/medods-simonTheGame',
   plugins: [
     vue2(),
     legacy({
-      targets: ['ie >= 11'],
+      targets: ["ie >= 11"],
       additionalLegacyPolyfills: ['regenerator-runtime/runtime']
     })
   ],
@@ -17,5 +18,8 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  define: {
+    __VUE_PROD_DEVTOOLS__: "true",
+  },
 })
