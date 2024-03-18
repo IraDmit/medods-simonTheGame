@@ -116,6 +116,7 @@ export default {
     },
 
     checkPlayerInput(colorIdx) {
+      if (!this.sequence.length) return;
       this.playAudio(colorIdx);
       if (this.sequence[this.countClick] !== colorIdx) {
         this.resetGame();
